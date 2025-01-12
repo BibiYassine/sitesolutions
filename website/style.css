@@ -1,91 +1,356 @@
-body{
-    background-color: black;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Sidenav styles */
-.sidenav {
+/* General Reset */
+html,body {
     height: 100%;
-    width: 0; /* Initially closed */
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    padding-top: 20px;
-    transition: 0.5s; /* Smooth transition */
-}
-
-.sidenav a {
-   padding: 15px 25px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: gold;
-}
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-/* Hamburger menu styles */
-.hamburger {
-    border-radius: 50px; /* Perfect circle */
-    background-color: white;
-    color: gold;
-    display: block; /* Always display the hamburger menu */
-    position: absolute;
-    top: 20px;
-    left: 35px; /* Moved more to the right */
-    font-size: 50px; /* Increased size */
-    width: 60px; /* Increased width */
-    height: 60px; /* Increased height */
-    text-align: center; /* Center the icon */
-    line-height: 60px; /* Center the icon vertically */
-    cursor: pointer;
-}
-
-.welkom{
-   background-color: white;
     margin: 0;
-    padding: 20;
-    padding-bottom: 20px;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
+header {
+    width: 100%;
 
-.welkom h1 {
+    /* border-bottom: 4px solid#A79976; Changed color */
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.logo {
+    color:#A79976; /* Changed color */
+    height: auto;
+    font-size: 5.4rem;
+    font-weight: bold;
+    font-family: "WindSong", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 10%;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
     color: black;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 200px;
-}   
-.welkom h1:hover{
-    transition: 0.5s;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+
+    color:#A79976; /* Changed color */
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
     cursor: pointer;
-    color: gold;
+    z-index: 10;
 }
 
-.welkom p {
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    margin-top: 50px;
-    border: 2px solid black;
+.hamburger .line {
+    background-color: black;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger .line-top {
+    transform-origin: top left;
+}
+
+.hamburger .line-middle {
+    opacity: 1;
+}
+
+.hamburger .line-bottom {
+    transform-origin: bottom left;
+}
+
+/* Animation to form an 'S' */
+.hamburger.active .line-top {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line-middle {
+    opacity: 0;
+}
+
+.hamburger.active .line-bottom {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+  /* Footer stijl */
+  footer {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  /* Container voor de footer */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Stijl voor secties binnen de footer */
+  .footer-section {
+    flex: 1;
     padding: 10px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
+    min-width: 200px;
+  }
+  
+  /* Stijl voor de kopjes */
+  .footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  /* Lijststijl voor de footer */
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Links binnen de footer */
+  .footer-section ul li {
+    margin: 8px 0;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Hover-effect voor links */
+  .footer-section ul li a:hover {
+    color:#A79976;
+  }
+  
+  /* Stijl voor sociale media icoontjes */
+  .footer-section ul li a i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Invoer- en knopstijl voor nieuwsbrief */
+  footer input[type="email"] {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  footer button {
+    padding: 10px;
+    background-color: #A79976;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    background-color: #A79976;
+  }
+  
+  /* Stijl voor Google Maps iframe */
+  .google-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+  }
+  
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+
+    .nav-links.active {
+        height: 300px; /* Adjust height based on number of links */
+    }
+
+    .nav-links li {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 0.5s forwards ease-in-out;
+    }
+
+    .nav-links li:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    .nav-links li:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .nav-links li:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+
+    .nav-links li:nth-child(5) {
+        animation-delay: 0.6s;
+    }
+
+    .nav-links li:nth-child(6) {
+        animation-delay: 0.7s;
+    }
+
+    .nav-links a{
+        color: white;
+    }
+     /* Footer stijl */
+  footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  
+  /* Container voor de footer */
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Stijl voor secties binnen de footer */
+  .footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+  }
+  
+  /* Stijl voor de kopjes */
+  .footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  /* Lijststijl voor de footer */
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Links binnen de footer */
+  .footer-section ul li {
+    margin: 8px 0;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Hover-effect voor links */
+  .footer-section ul li a:hover {
+    color:#A79976;
+  }
+  
+  /* Stijl voor sociale media icoontjes */
+  .footer-section ul li a i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  /* Invoer- en knopstijl voor nieuwsbrief */
+  footer input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  footer button {
+    padding: 10px;
+    background-color: #A79976;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    background-color: #A79976;
+  }
+  
+  /* Stijl voor Google Maps iframe */
+  .google-map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+  }
+  
 }
 
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
