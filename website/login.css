@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --goud: #A79976;
+    }
 
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -31,12 +34,6 @@ button {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.tip {
-    font-size: 20px;
-    margin: 40px auto 50px;
-    text-align: center;
-}
-
 .cont {
  
     border-radius: 20px;
@@ -44,7 +41,6 @@ button {
     position: relative;
     width: 900px;
     height: 550px;
-    margin: 0 auto 100px;
     background: black;
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
 }
@@ -154,7 +150,7 @@ button {
 }
 
 .img__text p {
-    font-size: 14px;
+    font-size: 10px;
     line-height: 1.5;
 }
 
@@ -262,16 +258,6 @@ label span {
     text-transform: uppercase;
 }
 
-input {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    text-align: center;
-}
-
 .forgot-pass {
     margin-top: 15px;
     text-align: center;
@@ -320,7 +306,50 @@ input {
     transform: translate3d(0, 0, 0);
 }
 
-@media screen and (max-width: 600px) {
-    
+.wave-group {
+    position: relative;
+  }
+  
+  .wave-group .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+  }
+  
+  .wave-group .input:focus {
+    outline: none;
+  }
+  
+  .wave-group .label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+  }
+  
+  .wave-group .label-char {
+    transition: 0.2s ease all;
+  }
+  
+  .wave-group .input:focus ~ label .label-char,
+  .wave-group .input:valid ~ label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: var(--goud);
+  }
+  
+  .wave-group .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+  }
+  
 
-}
