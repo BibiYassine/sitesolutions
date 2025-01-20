@@ -2,7 +2,7 @@
 echo ' <header> 
         <nav>
             <div class="logo">
-                   s
+                   <a class="unstyled gold" href="index">s</a>
             </div>
             <button class="hamburger" id="hamburger">
                 <div class="line line-top"></div>
