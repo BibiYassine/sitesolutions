@@ -34,7 +34,7 @@ include 'functies/sideMenu.php';
                 <span>Password</span>
                 <input type="password" />
             </label>
-            <p class="forgot-pass">Forgot password?</p>
+            <p class="forgot-pass"><a href="reset_password">Forgot password?</a></p>
             <button type="button" class="submit">Sign In</button>
          
         </div>

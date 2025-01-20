@@ -18,6 +18,14 @@ body {
     background-repeat: no-repeat;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #A79976;
+}
+
 input,
 button {
     border: none;
@@ -27,6 +35,7 @@ button {
 }
 
 .cont {
+ 
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -218,6 +227,17 @@ button {
     -webkit-transform: translateY(72px);
     transform: translateY(72px);
 }
+input{
+    background-color: #A79976;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+    font-size: 20px;
+}
 
 h2 {
     width: 100%;
@@ -285,6 +305,7 @@ label span {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
 .wave-group {
     position: relative;
   }
@@ -331,4 +352,4 @@ label span {
     width: 200px;
   }
   
-  
+
