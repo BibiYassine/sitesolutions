@@ -1,28 +1,48 @@
-/* General Reset */
+:root{
+--goud: #A79976;
+}
+
 html,body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    overflow-y: visible;
+    min-height: 100vh;
 }
 
 header {
     width: 100%;
-
+  
     /* border-bottom: 4px solid#A79976; Changed color */
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    
 }
 
 nav {
     height: 50px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    position: relative;
+    position: fixed;
+    border-bottom: 2px solid #A79976;
 }
 
 .logo {
-    color:#A79976; /* Changed color */
+    color:var(--goud); /* Changed color */
     height: auto;
     font-size: 5.4rem;
     font-weight: bold;
@@ -108,7 +128,8 @@ nav {
     color: white;
     padding: 50px;
     width: 100%;
-    position: fixed;
+    height: auto;
+
     bottom: 0;
     left: 0;
     z-index: 10;
@@ -120,6 +141,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
+    height: auto;
     margin: 0 auto;
   }
   
@@ -199,7 +221,7 @@ nav {
     .hamburger {
         display: flex;
     }
-
+    
     .nav-links {
         display: flex;
         justify-content: center;
@@ -258,7 +280,6 @@ nav {
     color: white;
     padding: 20px;
     width: 100%;
-    position: fixed;
     bottom: 0;
     left: 0;
     z-index: 10;
@@ -270,6 +291,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
+    padding: auto;
     margin: 0 auto;
   }
   
@@ -338,7 +360,8 @@ nav {
   .google-map iframe {
     width: 100%;
     height: 200px;
-    border: none;
+    border-radius: 20px;
+
   }
   
 }

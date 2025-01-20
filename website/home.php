@@ -8,44 +8,34 @@ include 'functies/sideMenu.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Site Solutions</title>
+    <link rel="shortcut icon" href="images/s.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="libraries/aos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
     <header>
-        <!-- <nav>
-            <div class="logo">
-                   s
-            </div>
-            <button class="hamburger" id="hamburger">
-                <div class="line line-top"></div>
-                <div class="line line-middle"></div>
-                <div class="line line-bottom"></div>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="home" class="active">Home</a></li>
-                <li><a href="about">Site Solutions</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="offertes">Offerte</a></li>
-                <li><a href="login">Login</a></li>
-            </ul>
-        </nav> -->
+
     </header>
 
+    <main>
 
+    <h2>Welkom bij Site Solutions</h2>
+    <p>
+</main>
+
+     
     <footer>
   <div class="footer-container">
     <div class="footer-section">
       <h3>Openingstijden</h3>
       <ul>
         <li>Maandag - Zondag: <br>00:00 - 24:00</li>
-      
+          
       </ul>
     </div>
 
@@ -53,7 +43,7 @@ include 'functies/sideMenu.php';
       <h3>Volg ons</h3>
       <ul>
        
-        <li><a href="https://instagram.com/sitesolutionsbe" target="_blank">Instagram - Site Solutions</a></li>
+        <li><a href="https://instagram.com/sitesolutionsbe" target="_blank"><img src="images/insta.png" width="50px" height="50px"></a></li>
         
       </ul>
     </div>
@@ -68,9 +58,7 @@ include 'functies/sideMenu.php';
 
     <div class="footer-section">
       <h3>Locatie</h3>
-      <div class="google-map">
-        <iframe src="https://g.co/kgs/hpBgMYy" allowfullscreen></iframe>
-      </div>
+      <div style="width: 100%"><iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Gustave%20van%20de%20Woestijnestraat%2052+(Site%20Solutions)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div>
     </div>
 
     <div class="footer-section">
