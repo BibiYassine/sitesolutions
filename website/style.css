@@ -218,11 +218,13 @@ nav {
   }
   
   /* Contactpagina */
+  
   .main-contact{
     display: flex;
     justify-content: center;
     align-items: center;
-   flex-direction: column;
+    flex-direction: column;
+    padding-top: 50%;
   }
 
   .contact-container {
@@ -231,6 +233,7 @@ nav {
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    
     background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -248,9 +251,44 @@ nav {
   .google-maps-contact {
     background-color: #A79976;
     border-radius: 10px;
- 
-    
-    
+    width: 50%;
+    height: 50vh;
+  }
+  
+
+  .cont-form {
+    background-color: black;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .cont-form input{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  .cont-form textarea{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  .cont-form button{
+    padding: 10px;
+    background-color: #A79976;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  .cont-form button:hover{
+    background-color: #cfbe93;
   }
   iframe{
     display: flex;
@@ -258,6 +296,21 @@ nav {
     align-items: center;
     border-radius: 10px;
     width: 100%;
+  }
+
+  .openingstijden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 45%;
+  }
+  .openingstijden a{
+    color: #A79976;
   }
   
   
@@ -386,7 +439,7 @@ nav {
 
   footer input[type="email"] {
     padding: 10px;
-    width: 100%;
+    width: 70%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
   }
@@ -404,7 +457,7 @@ nav {
   }
   
   .google-map iframe {
-    width: 100%;
+    width: 80%;
     height: 200px;
     border-radius: 20px;
 
