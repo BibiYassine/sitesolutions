@@ -1,5 +1,5 @@
 <?php
-echo ' <header> 
+echo '
         <nav>
             <div class="logo">
                    <a class="unstyled gold" href="index">s</a>
@@ -18,6 +18,5 @@ echo ' <header>
                 <li><a href="login">Login</a></li>
             </ul>
         </nav>
-    </header>
 ';
 ?>

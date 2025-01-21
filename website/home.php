@@ -1,7 +1,3 @@
-<?php
-include 'functies/sideMenu.php';
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +13,13 @@ include 'functies/sideMenu.php';
 
 </head>
 <body>
-    
-    <header>
+<?php
+include 'functies/sideMenu.php';
 
-    </header>
+?>
 
-    <main>
-
+<main>
     <h2>Welkom bij Site Solutions</h2>
-    <p>
 </main>
 
      
@@ -34,7 +28,7 @@ include 'functies/sideMenu.php';
     <div class="footer-section">
       <h3>Openingstijden</h3>
       <ul>
-        <li>Maandag - Zondag: <br>00:00 - 24:00</li>
+        <li>Maandag - Zondag: <br>24/7</li>
           
       </ul>
     </div>
@@ -42,15 +36,13 @@ include 'functies/sideMenu.php';
     <div class="footer-section">
       <h3>Volg ons</h3>
       <ul>
-       
         <li><a href="https://instagram.com/sitesolutionsbe" target="_blank"><img src="images/insta.png" width="50px" height="50px"></a></li>
-        
       </ul>
     </div>
 
     <div class="footer-section">
       <h3>Nieuwsbrief</h3>
-      <form action="#">
+      <form class="center-container" action="#">
         <input type="email" placeholder="Voer je e-mail in" required>
         <button type="submit">Inschrijven</button>
       </form>

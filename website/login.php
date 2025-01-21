@@ -22,7 +22,7 @@ include 'functies/sideMenu.php';
 <body>
     <?php include 'functies/sidemenu.php'; ?>
 
-    <div class="center-container">
+    <div class="center-container login-page">
     <div class="cont">
         <div class="form sign-in">
             <h2>Welcome</h2>
