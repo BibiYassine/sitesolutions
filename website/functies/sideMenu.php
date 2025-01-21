@@ -4,11 +4,11 @@ echo '
             <div class="logo">
                    <a class="unstyled gold" href="index">s</a>
             </div>
-            <button class="hamburger" id="hamburger">
-                <div class="line line-top"></div>
-                <div class="line line-middle"></div>
-                <div class="line line-bottom"></div>
-            </button>
+            <div id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links" id="nav-links">
                 <li><a href="home" class="active">Home</a></li>
                 <li><a href="about">Site Solutions</a></li>

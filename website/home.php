@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Site Solutions</title>
-    <link rel="shortcut icon" href="images/s.ico" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="images/s.ico" type="image/x-icon"> -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="libraries/aos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
@@ -65,11 +64,16 @@ include 'functies/sideMenu.php';
   </div>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-    <script src="script.js"></script>
-    <script src="libraries/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+        });
+    });
+</script>
+
 </body>
 </html>
