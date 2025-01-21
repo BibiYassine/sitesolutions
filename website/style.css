@@ -1,23 +1,46 @@
 :root{
 --goud: #A79976;
+--hovergoud: #8e7c4e;
 }
+
+/* kleur van selctie */
 ::selection {
     background: var(--goud);
     color: white;
 }
 
-html,body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    overflow-y: visible;
-    min-height: 100vh;
+
+/* scrollbar css */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  
 }
 
 
-header {
+::-webkit-scrollbar-track {
+  background: transparent; 
+  
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: var(--goud);
+  border-radius:500px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hovergoud); 
+}
+
+html,body {
+    height: 100%;
     width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: visible;
+    min-height: 100vh;
 }
 
 main{
@@ -42,7 +65,9 @@ nav {
     align-items: center;
     padding: 1rem 2rem;
     position: fixed;
-    z-index: 9999999;
+    top: 0;
+    left: 0;
+    z-index: 9;
     border-bottom: 2px solid var(--goud);
 }
 
@@ -61,7 +86,7 @@ nav {
     display: flex;
     gap: 1.5rem;
     margin: 0;
-    padding: 10%;
+    padding-right: 10%;
 }
 
 .nav-links li {
@@ -100,6 +125,7 @@ nav {
     height: 4px;
     width: 100%;
     border-radius: 2px;
+    z-index: 10;
     transition: all 0.4s ease-in-out;
 }
 
@@ -131,7 +157,6 @@ nav {
     background-color: black;
     color: white;
     padding: 50px;
-    width: 100%;
     height: auto;
 
     bottom: 0;
@@ -144,7 +169,7 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1200px;
+    width: 95%;
     height: auto;
     margin: 0 auto;
   }
@@ -153,7 +178,7 @@ nav {
   .footer-section {
     flex: 1;
     padding: 10px;
-    min-width: 200px;
+    margin: 0 10px;
   }
   
 
@@ -332,7 +357,6 @@ nav {
         top: 100%;
         left: 0;
         background-color: black;
-        width: 100%;
         height: 0;
         overflow: hidden;
         transition: height 0.5s ease-in-out;
@@ -380,7 +404,6 @@ nav {
     background-color: black;
     color: white;
     padding: 20px;
-    width: 100%;
     bottom: 0;
     left: 0;
     z-index: 10;
@@ -389,17 +412,26 @@ nav {
 
   .footer-container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    flex-direction: column;
+    align-items: center;
     padding: auto;
     margin: 0 auto;
   }
   
   .footer-section {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     padding: 10px;
     min-width: 200px;
+  }
+  .footer-section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: unset;
   }
   
 

@@ -1,13 +1,15 @@
-*,
-*:before,
-*:after {
+/* Add a parent class to scope the styles */
+.login-page *,
+.login-page *:before,
+.login-page *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-:root{
+
+.login-page :root{
     --goud: #A79976;
-    }
+}
 
 body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -18,24 +20,23 @@ body {
     background-repeat: no-repeat;
 }
 
-a{
+.login-page a{
     text-decoration: none;
     color: white;
 }
-a:hover{
+.login-page a:hover{
     color: #A79976;
 }
 
-input,
-button {
+.login-page input,
+.login-page button {
     border: none;
     outline: none;
     background: none;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-.cont {
- 
+.login-page .cont {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -45,7 +46,7 @@ button {
     box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15);
 }
 
-.form {
+.login-page .form {
     position: relative;
     width: 640px;
     height: 100%;
@@ -57,7 +58,7 @@ button {
     padding: 50px 30px 0;
 }
 
-.sub-cont {
+.login-page .sub-cont {
     overflow: hidden;
     position: absolute;
     left: 640px;
@@ -72,12 +73,12 @@ button {
     transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.cont.s--signup .sub-cont {
+.login-page .cont.s--signup .sub-cont {
     -webkit-transform: translate3d(-640px, 0, 0);
     transform: translate3d(-640px, 0, 0);
 }
 
-button {
+.login-page button {
     display: block;
     margin: 0 auto;
     width: 260px;
@@ -88,7 +89,7 @@ button {
     cursor: pointer;
 }
 
-.img {
+.login-page .img {
     overflow: hidden;
     z-index: 2;
     position: absolute;
@@ -99,7 +100,7 @@ button {
     padding-top: 360px;
 }
 
-.img:before {
+.login-page .img:before {
     content: '';
     position: absolute;
     right: 0;
@@ -114,7 +115,7 @@ button {
     transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.img:after {
+.login-page .img:after {
     content: '';
     position: absolute;
     left: 0;
@@ -124,12 +125,12 @@ button {
     background-color:  #A79976;
 }
 
-.cont.s--signup .img:before {
+.login-page .cont.s--signup .img:before {
     -webkit-transform: translate3d(640px, 0, 0);
     transform: translate3d(640px, 0, 0);
 }
 
-.img__text {
+.login-page .img__text {
     z-index: 2;
     position: absolute;
     left: 0;
@@ -144,32 +145,32 @@ button {
     transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
 }
 
-.img__text h2 {
+.login-page .img__text h2 {
     margin-bottom: 10px;
     font-weight: normal;
 }
 
-.img__text p {
+.login-page .img__text p {
     font-size: 10px;
     line-height: 1.5;
 }
 
-.cont.s--signup .img__text.m--up {
+.login-page .cont.s--signup .img__text.m--up {
     -webkit-transform: translateX(520px);
     transform: translateX(520px);
 }
 
-.img__text.m--in {
+.login-page .img__text.m--in {
     -webkit-transform: translateX(-520px);
     transform: translateX(-520px);
 }
 
-.cont.s--signup .img__text.m--in {
+.login-page .cont.s--signup .img__text.m--in {
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
 
-.img__btn {
+.login-page .img__btn {
     overflow: hidden;
     z-index: 2;
     position: relative;
@@ -183,7 +184,7 @@ button {
     cursor: pointer;
 }
 
-.img__btn:after {
+.login-page .img__btn:after {
     content: '';
     z-index: 2;
     position: absolute;
@@ -195,7 +196,7 @@ button {
     border-radius: 30px;
 }
 
-.img__btn span {
+.login-page .img__btn span {
     position: absolute;
     left: 0;
     top: 0;
@@ -213,21 +214,22 @@ button {
     transition: transform 1.2s, -webkit-transform 1.2s;
 }
 
-.img__btn span.m--in {
+.login-page .img__btn span.m--in {
     -webkit-transform: translateY(-72px);
     transform: translateY(-72px);
 }
 
-.cont.s--signup .img__btn span.m--in {
+.login-page .cont.s--signup .img__btn span.m--in {
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
 
-.cont.s--signup .img__btn span.m--up {
+.login-page .cont.s--signup .img__btn span.m--up {
     -webkit-transform: translateY(72px);
     transform: translateY(72px);
 }
-input{
+
+.login-page input{
     background-color: #A79976;
     color: white;
     border: none;
@@ -239,55 +241,55 @@ input{
     font-size: 20px;
 }
 
-h2 {
+.login-page h2 {
     width: 100%;
     font-size: 26px;
     text-align: center;
 }
 
-label {
+.login-page label {
     display: block;
     width: 260px;
     margin: 25px auto 0;
     text-align: center;
 }
 
-label span {
+.login-page label span {
     font-size: 12px;
     color: #cfcfcf;
     text-transform: uppercase;
 }
 
-.forgot-pass {
+.login-page .forgot-pass {
     margin-top: 15px;
     text-align: center;
     font-size: 12px;
     color: #cfcfcf;
 }
 
-.submit {
+.login-page .submit {
     margin-top: 40px;
     margin-bottom: 20px;
     background:  #A79976;
     text-transform: uppercase;
 }
 
-.fb-btn {
+.login-page .fb-btn {
     border: 2px solid #d3dae9;
     color: #8fa1c7;
 }
 
-.fb-btn span {
+.login-page .fb-btn span {
     font-weight: bold;
     color: #455a81;
 }
 
-.sign-in {
+.login-page .sign-in {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
 
-.cont.s--signup .sign-in {
+.login-page .cont.s--signup .sign-in {
     -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
     -webkit-transition-duration: 1.2s;
@@ -296,21 +298,21 @@ label span {
     transform: translate3d(640px, 0, 0);
 }
 
-.sign-up {
+.login-page .sign-up {
     -webkit-transform: translate3d(-900px, 0, 0);
     transform: translate3d(-900px, 0, 0);
 }
 
-.cont.s--signup .sign-up {
+.login-page .cont.s--signup .sign-up {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
-.wave-group {
+.login-page .wave-group {
     position: relative;
-  }
-  
-  .wave-group .input {
+}
+
+.login-page .wave-group .input {
     font-size: 16px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -318,13 +320,13 @@ label span {
     border: none;
     border-bottom: 1px solid #515151;
     background: transparent;
-  }
-  
-  .wave-group .input:focus {
+}
+
+.login-page .wave-group .input:focus {
     outline: none;
-  }
-  
-  .wave-group .label {
+}
+
+.login-page .wave-group .label {
     color: #999;
     font-size: 18px;
     font-weight: normal;
@@ -333,23 +335,23 @@ label span {
     left: 5px;
     top: 10px;
     display: flex;
-  }
-  
-  .wave-group .label-char {
+}
+
+.login-page .wave-group .label-char {
     transition: 0.2s ease all;
-  }
-  
-  .wave-group .input:focus ~ label .label-char,
-  .wave-group .input:valid ~ label .label-char {
+}
+
+.login-page .wave-group .input:focus ~ label .label-char,
+.login-page .wave-group .input:valid ~ label .label-char {
     transform: translateY(-20px);
     font-size: 14px;
     color: var(--goud);
-  }
-  
-  .wave-group .bar {
+}
+
+.login-page .wave-group .bar {
     position: relative;
     display: block;
     width: 200px;
-  }
-  
+}
+
 
