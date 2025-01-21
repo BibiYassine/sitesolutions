@@ -59,7 +59,7 @@ main{
 
 nav {
     height: 85px;
-    width: 100%; /* Ensure the navbar width is 100% of the body */
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +69,7 @@ nav {
     left: 0;
     z-index: 9;
     border-bottom: 2px solid var(--goud);
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
 }
 
 .logo {
@@ -112,8 +112,8 @@ nav {
 
 .nav-links.show {
     display: flex;
-    max-height: 300px; /* Adjust based on your desired height */
-    overflow-y: auto; /* Allow scrolling if content exceeds max-height */
+    max-height: 300px;
+    overflow-y: auto; 
 }
 
 .hamburger {
@@ -402,7 +402,7 @@ nav {
 
   footer input[type="email"] {
     padding: 10px;
-    width: 70%;
+    width: 100%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
   }
@@ -413,6 +413,7 @@ nav {
     border: none;
     color: white;
     cursor: pointer;
+    text-align: center;
   }
   
   footer button:hover {
@@ -432,26 +433,27 @@ nav {
         width: 100%;
         text-align: center;
         position: absolute;
-        top: 85px; /* Adjust this value to position the links lower */
+        top: 85px;
         left: 0;
-        max-height: 0; /* Initially set max-height to 0 */
+        max-height: 0; 
         overflow-y: hidden;
-        background-color: white; /* Optional: Add background color */
+        background-color: white; 
         transition: max-height 0.5s ease-in-out;
         z-index: 10;
         padding: 0;
-        padding-top: 15px; /* Ensure the nav-links are above other elements */
-    }
+        padding-top: 15px; 
 
     .nav-links.show {
         display: flex;
-        max-height: 300px; /* Adjust based on your desired height */
-        overflow-y: auto; /* Allow scrolling if content exceeds max-height */
+        max-height: 300px; 
+        overflow-y: auto;
     }
 
     .hamburger {
         display: flex;
     }
+}
+
 }
 
 
@@ -484,3 +486,4 @@ nav {
 .background-gold {
     background-color: var(--goud);
 }
+

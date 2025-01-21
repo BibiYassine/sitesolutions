@@ -20,7 +20,7 @@ include 'functies/sideMenu.php';
 </head>
 </head>
 <body>
-    <?php include 'functies/sidemenu.php'; ?>
+    <?php include 'functies/pagina/header.php'; ?>
 
     <div class="center-container login-page">
     <div class="cont">
