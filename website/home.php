@@ -16,8 +16,16 @@
 <body>
   <?php include 'functies/pagina/header.php';?>
 
-  <main class="bg">
-    <h2>Welkom bij Site Solutions</h2>
+  <main>
+    <section class="home">
+      <div class="home-content">
+        <h1>Welkom bij Site Solutions</h1>
+        <p>Wij zijn een bedrijf dat gespecialiseerd is in het maken van websites en webapplicaties. <br>Wij maken websites voor zowel particulieren als bedrijven.<br> Wij maken websites op maat en zorgen ervoor dat de website voldoet aan de wensen van de klant. Wij maken gebruik van de nieuwste technieken en zorgen ervoor dat de website er goed uitziet op alle apparaten.</p>
+        <a href="contact.php" class="btn">Contact</a>
+      </div>
+    </section>
+    <div  class="bg"></div>
+    
   </main>
 
   <?php include 'functies/pagina/footer.php';?>
