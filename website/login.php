@@ -24,38 +24,38 @@
             <div class="form sign-in">
                 <h2>Welcome</h2>
                 <label>
-                    <span>Email</span>
+                    <span>E-mail</span>
                     <input type="email" />
                 </label>
                 <label>
-                    <span>Password</span>
+                    <span>Wachtwoord</span>
                     <input type="password" />
                 </label>
-                <p class="forgot-pass"><a href="reset_password">Forgot password?</a></p>
+                <p class="forgot-pass"><a href="reset_password">Wachtwoord vergeten?</a></p>
                 <button type="button" class="submit">Sign In</button>
 
             </div>
             <div class="sub-cont">
                 <div class="img">
                     <div class="img__text m--up">
-                        <h1>Welcome back!</h1>
+                        <h1>Welkom terug!</h1>
                         <br>
                         <br>
                         <br>
                         <br>
                         <br>
                         <br>
-                        <h3>Don't have an account? Please Sign up!<h3>
+                        <h3>Heb jij nog geen account? Maak hier één aan!<h3>
                     </div>
                     <div class="img__text m--in">
-                        <h1>Welcome!</h1>
+                        <h1>Welkom!</h1>
                         <br>
                         <br>
                         <br>
                         <br>
                         <br>
                         <br>
-                        <h3>If you already has an account, just sign in.<h3>
+                        <h3>Heb jij al een account, log hier in.<h3>
                     </div>
                     <div class="img__btn">
                         <span class="m--up">Sign Up</span>
@@ -63,17 +63,17 @@
                     </div>
                 </div>
                 <div class="form sign-up">
-                    <h2>Create your Account</h2>
+                    <h2>Maak je account aan</h2>
                     <label>
-                        <span>Name</span>
+                        <span>Naam</span>
                         <input type="text" />
                     </label>
                     <label>
-                        <span>Email</span>
+                        <span>E-mail</span>
                         <input type="email" />
                     </label>
                     <label>
-                        <span>Password</span>
+                        <span>Wachtwoord</span>
                         <input type="password" />
                     </label>
                     <button type="button" class="submit">Sign Up</button>
