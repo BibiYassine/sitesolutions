@@ -43,21 +43,20 @@ html,body {
     min-height: 100vh;
 }
 
+.glass-blur{
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+}
+
 main{
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("images/bg.png");
 
 }
 .home{
-    background-image: url("images/homebg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 5px;
     height: 78vh;
     width: 100%;
     display: flex;
@@ -103,12 +102,12 @@ main{
   text-decoration: none;
 }
 
-/* .bg {
+.bg {
   background-image: url("images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;  
-} */
+}
 nav {
     height: 85px;
     width: 100%; 
