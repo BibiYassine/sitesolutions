@@ -267,42 +267,30 @@ nav {
     height: 50vh;
   }
   
-.glass-blur{
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
-}
+
   .cont-form {
+    background-color: black;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 60%;
   }
   .cont-form input{
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
-    border: 1.5px solid #ccc;
-    outline: none;
-    transition: 0.15s ease-in-out;
-  }
-
-  .cont-form input:focus, .cont-form textarea:focus, .cont-form input:active, .cont-form textarea:active{
-    border: 1.5px solid var(--goud);
+    border: 1px solid #ccc;
   }
   .cont-form textarea{
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
-    border: 1.5px solid #ccc;
-    outline: none;
-      resize: vertical;
-      min-height: 20px;
-      max-height: 120px;
+    border: 1px solid #ccc;
   }
   .cont-form button{
     padding: 10px;
@@ -331,6 +319,7 @@ nav {
     background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 45%;
   }
   .openingstijden a{
     color: #A79976;
