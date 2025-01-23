@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/s.png" type="image/x-icon">
 </head>
 
@@ -20,6 +22,7 @@
 
     <main class="bg">
         <div class="cont-form glass-blur">
+            <h2 data aos="fade-left">Contacteer ons</h2>
             <form action="send_mail.php" method="POST">
                 <label for="name">Naam:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
@@ -36,7 +39,7 @@
     </main>
 
     <div class="openingstijden">
-        <h2>Contact</h2>
+        <h2>Contactgegevens</h2>
 
         <a href="mailto:sitesolutions.contact@gmail.com"><strong>E-mail naar Site Solutions</strong></a>
         <br>
@@ -77,6 +80,20 @@
     <?php
     include 'functies/pagina/footer.php';
     ?>
+    <script>
+  AOS.init();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>
+
 </body>
 
 </html>

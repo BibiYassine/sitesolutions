@@ -49,24 +49,66 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("images/bg.png");
 
 }
-.section{
+.home{
+    background-image: url("images/homebg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    height: 78vh;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.bg{
+
+.home-content{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  color: rgb(14, 13, 13);
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.home-content .btn{
+    padding: 10px 20px;
+    color: white;
+    border: 2px solid var(--goud);
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: var(--goud);
+}
+.home-content .btn:hover {
+  background-color: var(--hovergoud);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-content a {
+  color: #A79976;
+  text-decoration: none;
+}
+
+/* .bg {
   background-image: url("images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;  
-}
+} */
 nav {
     height: 85px;
     width: 100%; 
@@ -319,7 +361,6 @@ nav {
     background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 45%;
   }
   .openingstijden a{
     color: #A79976;
@@ -327,6 +368,35 @@ nav {
   .footer-section form {
     min-height: unset;
   }
+
+
+  /* about */
+
+ .about{
+    background-image: url("images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .about .tekst-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+
+ }
+ .about h1{
+  color: #A79976;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20%;
+ }
+  
   
   
 

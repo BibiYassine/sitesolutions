@@ -4,7 +4,7 @@ echo '    <footer>
     <div class="footer-section">
       <h3>Openingstijden</h3>
       <ul>
-        <li>Maandag - Zondag: <br>24/7</li>
+        <li>Maandag - Zondag: <br>00u00 - 24u00</li>
           
       </ul>
     </div>
