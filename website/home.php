@@ -16,7 +16,7 @@
 <body>
   <?php include 'functies/pagina/header.php';?>
 
-  <main>
+  <main class="bg">
     <section class="home">
       <div class="home-content">
         <h1>Welkom bij Site Solutions</h1>
@@ -24,7 +24,6 @@
         <a href="contact.php" class="btn">Contact</a>
       </div>
     </section>
-    <div  class="bg"></div>
     
   </main>
 
