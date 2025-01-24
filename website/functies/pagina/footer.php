@@ -4,8 +4,13 @@ echo '    <footer>
     <div class="footer-section">
       <h3>Openingstijden</h3>
       <ul>
-        <li>Maandag - Zondag: <br>00u00 - 24u00</li>
-          
+         <p>Maandag: 00:00 - 24:00</p>
+    <p>Dinsdag: 00:00 - 24:00</p>
+    <p>Woensdag: 00:00 - 24:00</p>
+    <p>Donderdag: 00:00 - 24:00</p>
+    <p>Vrijdag: 00:00 - 24:00</p>
+    <p>Zaterdag: 00:00 - 24:00</p>
+    <p>Zondag: 00:00 - 24:00</p>
       </ul>
     </div>
 

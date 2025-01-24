@@ -33,74 +33,252 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--hovergoud); 
 }
-
-html,body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-y: visible;
-    min-height: 100vh;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  
 }
 
-.glass-blur{
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.btn{
+  padding: 10px 20px;
+  color: white;
+  border: 2px solid var(--goud);
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--goud);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
 }
-.home{
-    height: 78vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.btn:hover {
+  background-color: var(--hovergoud);
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.home-content{
 
+main {
+  background-image: url("images/bg.png"); 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-height: calc(100vh - 85px); /* Vermindert de hoogte van de navbar */
+  padding: 20px;
+  padding-top: 105px; /* Zorg voor ruimte bovenaan om de navbar niet te overlappen */
+  text-align: center;
+ 
+}
+.home {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Begin box-shadow kleur */
+  border: 2px solid var(--goud);
+  animation: changeBackground 5s forwards, changeShadow 5s forwards; /* Beide animaties */
+}
+
+@keyframes changeBackground {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--goud);
+  }
+}
+.home h1 {
+  font-size: 2.5rem;
+  color: var(--goud);
+  margin-bottom: 20px;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
   color: rgb(14, 13, 13);
-  background: transparent;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: white;
 }
-.home-content .btn{
-    padding: 10px 20px;
-    color: white;
-    border: 2px solid var(--goud);
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: var(--goud);
+
+.home-content .btn {
+  padding: 10px 20px;
+  color: white;
+  border: 2px solid var(--goud);
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--goud);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .home-content .btn:hover {
   background-color: var(--hovergoud);
-  color: white;
   transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .home-content a {
   color: #A79976;
   text-decoration: none;
 }
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 5%;
+  width: 100%;
+
+}
+
+.info-tekst {
+  max-width: 300px;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.info-tekst:hover{
+  background-color: var(--goud);
+  color: white;
+  transition: 0.5s;
+}
+.info-tekst:hover img{
+  filter: invert(100%);
+  transition: 0.5s;
+}
+.info-tekst:hover h2{
+  color: white;
+  transition: 0.5s;
+}
+
+.info-tekst img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.info-tekst h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--goud);
+  text-align: center;
+}
+
+.info-tekst p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+}
+
+.diensten {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 5%;
+  width: 100%;
+}
+
+.diensten-tekst {
+  max-width: 500px;
+  height: auto;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.diensten-tekst h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--goud);
+  text-align: center;
+}
+
+.diensten-tekst p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+}
+
+/* .diensten-tekst:hover {
+  background-color: var(--goud);
+  color: white;
+  transition: 0.5s;
+}
+.diensten-tekst h2:hover{
+  color: white;
+  transition: 0.5s;
+} */
+
+.diensten-tekst:hover .btn {
+  color: white;
+  background-color: var(--hovergoud);
+}
+
+.diensten-tekst ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.diensten-tekst li {
+  margin: 15px 0;
+  padding-left: 35px; /* Ruimte voor het plaatje */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+}
+
+.diensten-tekst li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;  /* Zorg ervoor dat alle afbeeldingen dezelfde breedte hebben */
+  height: 20px; /* Zorg ervoor dat alle afbeeldingen dezelfde hoogte hebben */
+  background-image: url('images/swit.png'); /* Vervang dit door het pad naar jouw afbeelding */
+  background-size: contain;  /* Dit zorgt ervoor dat de afbeelding binnen de opgegeven afmetingen past */
+  background-repeat: no-repeat;
+}
+
+
+
+
+
 
 .bg {
   background-image: url("images/bg.png");
@@ -182,7 +360,10 @@ nav {
 }
 
   footer {
-    background-color: black;
+     background-color: black; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
     color: white;
     padding: 50px;
     height: auto;
@@ -212,12 +393,18 @@ nav {
 
   .footer-section h3 {
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
     font-size: 18px;
   }
   
 
   .footer-section ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     padding: 0;
   }
   
@@ -227,6 +414,10 @@ nav {
   }
   
   .footer-section ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -247,7 +438,7 @@ nav {
   footer input[type="email"] {
     border-radius: 5px;
     padding: 10px;
-    width: 100%;
+    width: 80%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
   }
@@ -261,7 +452,10 @@ nav {
   }
   
   footer button:hover {
-    background-color: var(--goud);
+    background-color: var(--hovergoud);
+      transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .google-map iframe {
@@ -269,49 +463,18 @@ nav {
     height: 200px;
     border: none;
   }
+  .footer-section form {
+    min-height: unset;
+  }
   
+
+
+
   /* Contactpagina */
-  
-  .main-contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 50%;
-  }
-
-  .contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    
-    background: transparent;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  .contact-container h1 {
-    margin-bottom: 20px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-  .tekst-contact p strong{
-    color: #A79976;
-  }
-
-  .google-maps-contact {
-    background-color: #A79976;
-    border-radius: 10px;
-    width: 50%;
-    height: 50vh;
-  }
-  
-
   .cont-form {
     background-color: black;
-    width: 50%;
+    width: 30%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -320,81 +483,251 @@ nav {
     background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .cont-form h2{
+    color: #A79976;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-decoration: underline #A79976 2px;
+    text-underline-offset: 8px;
+
   }
   .cont-form input{
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
   }
   .cont-form textarea{
     padding: 10px;
     width: 100%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
+    border-radius: 5px;
   }
   .cont-form button{
-    padding: 10px;
-    background-color: #A79976;
+    padding: 15px 30px;
+    background-color: var(--goud);
     border: none;
     color: white;
     cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
   }
   .cont-form button:hover{
-    background-color: #cfbe93;
+    background-color: var(--hovergoud);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-  iframe{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    width: 100%;
-  }
+
 
   .openingstijden{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 30%;
     padding: 20px;
     background: transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+
+  .openingstijden:hover{
+    background-color: var(--goud);
+    color: white;
+    transition: 0.5s;
+  }
+  .openingstijden:hover img{
+    filter: invert(100%);
+    transition: 0.5s;
+  }
   .openingstijden a{
-    color: #A79976;
+    color: black;
+    text-decoration: none;
   }
-  .footer-section form {
-    min-height: unset;
+  .openingstijden a:hover{
+    color: var(--hovergoud);
+    text-decoration: underline;
+    text-underline-offset: 4px; 
   }
+  .openingstijden img{
+    width: 10%;
+  }
+  
+  iframe{
+    width: 100%;
+    border-radius: 20px;
+  }
+  .extra-info{
+    border-top: var(--hovergoud ) 2px solid;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+   justify-content: space-between;
+    /* background-image: url("images/bg.png"); */
+  }
+  
+
 
 
   /* about */
 
- .about{
-    background-image: url("images/bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
- }
- .about .tekst-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  
+  .about {
+    padding: 80px 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
- }
- .about h1{
-  color: #A79976;
-  font-size: 30px;
-  cursor: pointer;
+  strong{
+    color: var(--goud);
+  }
+
+.about h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+   color: var(--goud);
+}
+.container-web {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 20%;
- }
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.iframe-container {
+  width: 40%;
+  height: 768px;
+  border: 1px solid #ccc;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.about-text {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #555;
+    text-align: left;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* .about-services sectie */
+.about-services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service {
+   
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+  
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Nieuwe .about-mission sectie */
+.about-mission {
+    padding: 60px 30px;
+    
+}
+
+.about-mission h2 {
+    
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.about-mission p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.mission-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-services {
+        grid-template-columns: 1fr;
+    }
+    .container-web {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .iframe-container {
+      width: 90%;
+      height: 800px;
+      border: 1px solid #ccc;
+    }
+}
+
+
   
   
   
@@ -403,9 +736,133 @@ nav {
 
 @media screen and (max-width: 768px) {
 
-
+ .bg{
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-position: center;
+  
+ }
     .hamburger {
         display: flex;
+    }
+
+    /* Home */
+    .home-content{
+        padding: 20px;
+    }
+    .home-content .btn{
+        padding: 10px 20px;
+        color: white;
+        border: 2px solid var(--goud);
+        border-radius: 30px;
+        cursor: pointer;
+        background-color: var(--goud);
+    }
+    .home-content .btn:hover {
+        background-color: var(--hovergoud);
+        color: white;
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .home-content a {
+        color: #A79976;
+        text-decoration: none;
+    }
+
+    .diensten {
+      flex-direction: column;
+      align-items: stretch; /* Zorg ervoor dat de items de volledige breedte vullen */
+      gap: 20px; /* Verminder de ruimte tussen de blokken */
+    }
+  
+    .diensten-tekst {
+      max-width: 100%; /* Zorg ervoor dat de blokken de volledige breedte gebruiken */
+      flex: 1 1 100%; /* Zorg ervoor dat de blokken even groot zijn */
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    .diensten-tekst h2 {
+      font-size: 20px; /* Maak de koptekst kleiner voor kleinere schermen */
+    }
+  
+    .diensten-tekst ul li {
+      font-size: 14px; /* Maak de lijstitems kleiner voor kleinere schermen */
+    }
+  
+    .diensten-tekst li::before {
+      width: 15px; /* Pas de grootte van de afbeeldingen aan voor kleinere schermen */
+      height: 15px;
+    }
+
+
+
+
+    /* Contact */
+
+    .cont-form {
+        width: 80%;
+        background-image: url("images/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .cont-form h2{
+        font-size: 20px;
+    }
+    .cont-form input{
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .cont-form textarea{
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .cont-form button{
+        padding: 10px;
+        background-color: var(--goud);
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .cont-form button:hover{
+        background-color: var(--hovergoud);
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .openingstijden{
+        width: 80%;
+    }
+    .openingstijden a{
+        color: black;
+        text-decoration: none;
+    }
+    .openingstijden a:hover{
+        color: var(--hovergoud);
+        text-decoration: underline;
+        text-underline-offset: 4px; 
+    }
+    .openingstijden img{
+      width: 10%;
+    }
+    
+    
+    .extra-info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+
     }
     
     
@@ -496,7 +953,10 @@ nav {
   }
   
   footer button:hover {
-    background-color: var(--goud);
+    background-color: var(--hovergoud);  
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
   
   .google-map iframe {
