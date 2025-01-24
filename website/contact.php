@@ -23,6 +23,8 @@
     <main class="bg">
         <div class="cont-form glass-blur">
             <h2 data aos="fade-left">Contacteer ons</h2>
+            <p>Heb je een vraag of wil je meer informatie over onze diensten?<br> Neem dan contact met ons op via onderstaand formulier.</p>
+            <br>
             <form action="send_mail.php" method="POST">
                 <label for="name">Naam:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
@@ -37,38 +39,55 @@
             </form>
         </div>
     </main>
-
+    <div class= "extra-info glass-blur">
     <div class="openingstijden">
-        <h2>Contactgegevens</h2>
-
-        <a href="mailto:sitesolutions.contact@gmail.com"><strong>E-mail naar Site Solutions</strong></a>
-        <br>
-        <a href="tel:+32471041591">+32 471 04 15 91</a>
-        <br>
-
-        <a href="mailto:yassine.b2007@hotmail.com"><strong>E-mail naar Medewerker</strong></a>
-        <br>
-        <a href="tel:+32499912181">+32 499 91 21 81</a>
-        <br>
-        <a href="mailto:dante.gallardoledon@gmail.com"><strong>E-mail naar Medewerker</strong></a>
-        <br>
-        <a href="tel:+32478102541">+32 478 10 25 41</a>
-    </div>
-
-
-
-    <!-- <div class="google-maps-contact">
+ <img src= "images/loc.png" alt="Locatie">
+ <br>
+ <br>
+ <br>
         <iframe width="100%" height="300" frameborder="0" scrolling="no"
             marginheight="0" marginwidth="0"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Gustave%20van%20de%20woestijnestraat%2052+(Site%20Solutions)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             <a href="https://www.gps.ie/">gps systems</a></iframe>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br> -->
+
+
+    <div class="openingstijden">
+       <img src= "images/cont.png" alt="Contact">
+       <br>
+        
+        <a href="mailto:sitesolutions.contact@gmail.com">E-mail naar Site Solutions</a>
+        <br>
+        <a href="tel:+32471041591">+32 471 04 15 91</a>
+        <br>
+
+        <a href="mailto:yassine.b2007@hotmail.com">E-mail naar Medewerker</a>
+        <br>
+        <a href="tel:+32499912181">+32 499 91 21 81</a>
+        <br>
+        <a href="mailto:dante.gallardoledon@gmail.com">E-mail naar Medewerker</a>
+        <br>
+        <a href="tel:+32478102541">+32 478 10 25 41</a>
+    </div>
+
+
+ 
+
+    <div class="openingstijden">
+
+    <img src= "images/tijd.png" alt="Openingstijden">
+    <p>Maandag: 00:00 - 24:00</p>
+    <p>Dinsdag: 00:00 - 24:00</p>
+    <p>Woensdag: 00:00 - 24:00</p>
+    <p>Donderdag: 00:00 - 24:00</p>
+    <p>Vrijdag: 00:00 - 24:00</p>
+    <p>Zaterdag: 00:00 - 24:00</p>
+    <p>Zondag: 00:00 - 24:00</p>
+
+    </div>
+    
+</div>
+  
     
 
 
