@@ -15,10 +15,19 @@
 </head>
 
 <body>
+  <?php 
+  include 'connect.php';
+  session_start();
+  //initaliseerd de klant variabele zodat er verder geen errors komen voor bezoekers die niet zijn ingelogd.
+  if(!isset($_SESSION['email'])){
+      $_SESSION['email'] = "gast";
+  }
+  
+  ?>
   <?php include 'functies/pagina/header.php';?>
 
   <main class="bg">
-    <section class="home">
+    <section class="home" class="bg">
       <div class="home-content glass-blur">
         <h1>Welkom bij Site Solutions</h1>
         <p>Zoek jij een bedrijf dat gespecialiseerd is in het maken van websites, webapplicaties en webshops. <br>Wij maken websites voor zowel particulieren als bedrijven.<br> Wij maken websites op maat en zorgen ervoor dat de website voldoet aan de wensen van de klant.</p>
@@ -62,15 +71,7 @@
     <br>Wij creëren websites die perfect aansluiten bij jouw visie.
     <br>Zo zorgen we ervoor dat je doelgroep zich aangesproken voelt.
     Met een gebruiksvriendelijke en visueel aantrekkelijke website bereik je jouw doelen sneller.</p>
-
-
-
-
-
-
-
-</p>
-      <br>
+    <br>
       <ul>
         <li>Responsive design</li>
         <li>Icl. Onderhoud</li>
@@ -108,7 +109,7 @@
         <li>Overal bereikbaar</li>
         <li>Betaalfuncties</li>
         <li>Gebruiksvriendelijk</li>
-        <li>Binnen de week online</li>
+        <li>24/7 support</li>
       </ul>
       <br>
       <a href="services#webshop" class="btn">Meer over webshops</a>

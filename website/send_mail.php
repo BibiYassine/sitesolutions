@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Verstuur e-mail
             $mail->send();
-            echo "<p>Bericht succesvol verzonden!</p><br> <a href='index'>Terug naar de website</a>";
+           header('Location: succes');
         } catch (Exception $e) {
             echo "Bericht kon niet worden verzonden. Mailer Error: {$mail->ErrorInfo}";
         }
@@ -53,6 +53,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Succesvol Bericht - Site Solutions</title>
+    <link rel="shortcut icon" href="images/s.png" type="image/x-icon">
+    
 </head>
 <body>
     <style>
@@ -61,6 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-align: center;
 
             background-image: url('images/bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
