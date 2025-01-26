@@ -41,7 +41,8 @@ html, body {
   font-family: Arial, sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
-  
+
+
 }
 
 *,
@@ -68,7 +69,7 @@ html, body {
 
 
 main {
-  background-image: url("images/bg.png"); 
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,22 +201,25 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* Zorgt dat alle kaarten dezelfde hoogte hebben */
   gap: 40px;
   padding: 50px 5%;
   width: 100%;
+  height: auto;
 }
 
 .diensten-tekst {
   max-width: 500px;
-  height: auto;
-  flex: 1 1 300px;
+  flex: 1 1 300px; /* Zorgt voor responsieve breedtes */
   display: flex;
   flex-direction: column;
+  justify-content: space-between; /* Verdeel inhoud gelijkmatig */
   align-items: center;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 450px; /* Stelt een minimale hoogte in */
+  
 }
 
 .diensten-tekst h2 {
@@ -231,6 +235,8 @@ main {
   color: #666;
   text-align: center;
 }
+
+
 
 /* .diensten-tekst:hover {
   background-color: var(--goud);
@@ -576,21 +582,125 @@ nav {
   }
   
 
+  /* Service pagina  */
+  .service-tekst{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-dienst1{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  .service-dienst1 h2{
+    color: var(--goud);
+  }
+  .service-dienst1 p {
+    text-align: left; /* Zorgt ervoor dat de tekst links uitgelijnd is */
+    line-height: 1.8; /* Helpt met een betere leesbaarheid */
+    margin: 0; /* Verwijdert eventuele extra marges rondom de paragraaf */
+    padding: 0;
+    color: #322f2f;
+    font-size: 18px; /* Maak de tekst goed leesbaar */
+}
+
+  .service-dienst1 img {
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: auto; /* Ensure it sticks to the left side */
+    padding: 20px;
+  }
+  .dienst1-tekst{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .dienst1-tekst ul {
+    list-style: none;
+  }
+  .dienst1-tekst li {
+    margin: 15px 0;
+    padding-left: 35px; /* Ruimte voor het plaatje */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+  }
+  .dienst1-tekst li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;  /* Zorg ervoor dat alle afbeeldingen dezelfde breedte hebben */
+    height: 20px; /* Zorg ervoor dat alle afbeeldingen dezelfde hoogte hebben */
+    background-image: url('images/swit.png'); /* Vervang dit door het pad naar jouw afbeelding */
+    background-size: contain;  /* Dit zorgt ervoor dat de afbeelding binnen de opgegeven afmetingen past */
+    background-repeat: no-repeat;
+  }
+
+  
+  @media (max-width: 768px) {
+    .service-dienst1 {
+        flex-direction: column; /* Items onder elkaar */
+        align-items: center; /* Center alle content */
+        text-align: center; /* Center tekst voor een betere look */
+    }
+
+    .service-dienst1 img {
+        width: 100%; /* Maak afbeeldingen breder op mobiel */
+        margin-bottom: 20px; /* Ruimte tussen de afbeelding en tekst */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dienst1-tekst {
+        align-items: center; /* Center tekst */
+        padding: 10px;
+    }
+
+    .service-dienst1 h2 {
+        font-size: 20px; /* Kleinere kop op mobiel */
+    }
+
+    .service-dienst1 p {
+        font-size: 16px; /* Kleinere tekst op mobiel */
+        line-height: 1.6; /* Iets compacter op mobiel */
+    }
+  }
+
+
+  /* offerte */
+
+
+  
+
+
+
 
 
   /* about */
-
   .about {
     padding: 80px 0;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
 }
-
   strong{
     color: var(--goud);
   }
-
 .about h1 {
     font-size: 4rem;
     margin-bottom: 30px;
@@ -604,8 +714,8 @@ nav {
   padding: 20px;
 }
 .iframe-container {
-  width: 40%;
-  height: 768px;
+  width: 80%;
+  height: 888px;
   border: 1px solid #ccc;
 }
 iframe {
@@ -637,13 +747,10 @@ iframe {
     border-radius: 8px;
     margin-top: 20px;
 }
-
-/* .about-services sectie */
 .about-services {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
@@ -675,8 +782,6 @@ iframe {
     font-size: 1.2rem;
     color: #555;
 }
-
-/* Nieuwe .about-mission sectie */
 .about-mission {
     padding: 60px 30px;
     
@@ -725,6 +830,7 @@ iframe {
       height: 800px;
       border: 1px solid #ccc;
     }
+    
 }
 
 
@@ -742,6 +848,11 @@ iframe {
   background-position: center;
   
  }
+ .iframe-container {
+  width: 90%;
+  height: 768px;
+  border: 1px solid #ccc;
+}
     .hamburger {
         display: flex;
     }
