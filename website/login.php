@@ -1,59 +1,3 @@
-<?php
-
-include 'connect.php';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (isset($_POST['action']) && $_POST['action'] === 'register') {
-        // Registratie
-        $naam = $_POST['naam'];
-        $email = $_POST['email'];
-        $wachtwoord = password_hash($_POST['wachtwoord'], PASSWORD_DEFAULT); // Versleuteld wachtwoord
-        $type = $_POST['type']; // Type gebruiker: admin of klant
-
-        $sql = "INSERT INTO tblklant (naam, email, wachtwoord, type) VALUES (?, ?, ?, ?)";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("ssss", $naam, $email, $wachtwoord, $type);
-
-        if ($stmt->execute()) {
-            echo "<script>alert('Registratie succesvol! Je kunt nu inloggen.');</script>";
-        } else {
-            echo "<script>alert('Er is iets fout gegaan bij de registratie. Probeer opnieuw.');</script>";
-        }
-        $stmt->close();
-    } elseif (isset($_POST['action']) && $_POST['action'] === 'login') {
-        // Inloggen
-        $email = $_POST['email'];
-        $wachtwoord = $_POST['wachtwoord'];
-
-        $sql = "SELECT * FROM tblklant WHERE email = ?";
-        $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            if (password_verify($wachtwoord, $row['wachtwoord'])) {
-                $_SESSION['email'] = $email;
-                $_SESSION['type'] = $row['type']; // Type gebruiker opslaan
-
-                if ($row['type'] === 'admin') {
-                    header("Location: admin");
-                } else {
-                    header("Location: index");
-                }
-                exit;
-            } else {
-                echo "<script>alert('Ongeldig wachtwoord.');</script>";
-            }
-        } else {
-            echo "<script>alert('Geen account gevonden met dit e-mailadres.');</script>";
-        }
-        $stmt->close();
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +15,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <?php include 'functies/pagina/header.php'; ?>
+    <?php include 'functies/pagina/header.php'; include 'connect.php'; include 'functies/functies.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (isset($_POST['action']) && $_POST['action'] === 'register') {
+        
+        $naam = $_POST['naam'];
+        $email = $_POST['email'];
+        $wachtwoord = password_hash($_POST['wachtwoord'], PASSWORD_DEFAULT);
+
+        $klant_id = register($mysqli, $naam, $email, $wachtwoord);
+        echo "klant_id: ";
+        echo $klant_id;
+        $type = getUserType($klant_id, $mysqli);
+        $_SESSION['klant_id'] = $klant_id;
+
+        if ($type === 'admin') {
+            header('Location: admin.php');
+        } else {
+            header('Location: profile.php');
+        }
+
+    } elseif ((isset($_POST['action']) && $_POST['action'] === 'login')) {
+
+        $emailoruser = $_POST['email'];
+        $wachtwoord = $_POST['wachtwoord'];
+        $klant_id = login($mysqli, $emailoruser, $wachtwoord);
+
+        if (!($klant_id == 0)) {
+            $type = getUserType($klant_id, $mysqli);
+            $_SESSION['klant_id'] = $klant_id;
+            if ($type === 'admin') {
+                header('Location: admin.php');
+            } else {
+                header('Location: profile.php');
+            }
+        } else {
+            echo "<script>alert('Gebruikersnaam of wachtwoord is onjuist.');</script>";
+        }
+
+    }
+}
+    
+    ?>
 
     <div class="center-container login-page">
         <div class="cont">
@@ -80,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <form method="POST">
                     <input type="hidden" name="action" value="login">
                     <label>
-                        <span>E-mail</span>
+                        <span>E-mail of Gebruikersnaam</span>
                         <input type="email" name="email" required />
                     </label>
                     <label>
@@ -121,13 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label>
                             <span>Wachtwoord</span>
                             <input type="password" name="wachtwoord" required />
-                        </label>
-                        <label>
-                            <span>Type gebruiker</span>
-                            <select name="type" required>
-                                <option value="klant">Klant</option>
-                                <option value="admin">Admin</option>
-                            </select>
                         </label>
                         <button type="submit" class="submit">Sign Up</button>
                     </form>
