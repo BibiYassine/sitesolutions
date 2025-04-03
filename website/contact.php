@@ -16,6 +16,11 @@
 </head>
 
 <body>
+<?php 
+  include 'connect.php'
+  
+  
+  ?>
     <?php
     include 'functies/pagina/header.php';
     ?>

@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Solutions - Over Ons</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/s.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<?php 
+  include 'connect.php'
+  
+  
+  ?>
     <!-- Header -->
     <?php include 'functies/pagina/header.php'; ?>
 
@@ -50,7 +56,7 @@
             <iframe src="https://www.needforcardetailing.be" title="Live Preview 1"></iframe>
         </div>
         <div class="iframe-container">
-            <iframe src="https://www.salmarina.be" title="Live Preview 2"></iframe>
+            <iframe src="https://casacuba.zoobagogo.com/" title="Live Preview 2"></iframe>
         </div>
         <div class="iframe-container">
             <iframe src="https://testhrit.zoobagogo.com/" title="Live Preview 3"></iframe>
